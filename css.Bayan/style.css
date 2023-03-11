@@ -1,0 +1,47 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+   /* font-size:16px;
+    background-color: aliceblue;*/
+}
+
+body p{
+   /* margin: 0 0 5px;*/
+}
+
+.container{
+    max-width:1000px;
+    /*margin: 0 auto;*/
+    cursor: pointer;
+}
+.accordion_box{
+    position:relative;
+ /*margin-bottom:20px;*/
+}
+.accordion_label{
+    display:block;
+    background-color: #ff23;
+    /*padding:20 px;*/
+    /*border: 1px solid #000;*/
+}
+.accordion_input{
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0;
+}
+.accordion_content{
+   /* padding:20 px;*/  
+    /*border: 1px solid #000;*/
+    border-top:none;
+    display:none;
+}
+.accordion_box:checked{
+    background-color: aqua;
+}
+.accordion_input:checked~.accordion_label{
+    background-color: aqua;
+}
+.accordion_input:checked ~ .accordion_content{
+    display: block;
+    background-color: aqua;
+}
