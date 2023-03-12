@@ -7,26 +7,27 @@ html{
     background-color: #e4e4e4;
 }
 /* Mobile */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 30rem) {
     .container {
-        width: 280px;
+        width: 17.5rem;
+        font-size: 1em;
     }
     .accordion_img {
-        width: 200px;
+        width: 12.5rem;
     }
 }
   /* Tablet */
-  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+  @media only screen and (min-width: 30.0625rem) and (max-width: 64rem) {
     .container {
-        width: 450px;
+        width: 28.125rem;
+        font-size: 1.25em;
     }
     .accordion_img {
-        width: 390px;
+        width: 24.375rem;
     }
   }
   /* Desktop */
-  @media only screen and (min-width: 1025px) {
-    
+  @media only screen and (min-width: 64.0625rem) {
     .accordion_input:hover~.accordion_label>.accordion_img>img{
         display: block;
         width: 100%;
@@ -43,15 +44,24 @@ html{
         transform: rotate(45deg);
         transition: transform .5s;
     }
-    .accordion_box:hover>.accordion_label>.accordion_icon>img{
-        visibility: visible;
+    .accordion_input:active.accordion_label{
+        opacity: 0.6;
+        color:aqua;
+    }
+    .container:hover{color:aqua;}
+    .accordion_input:checked+.accordion_label{
+        color:black;
+    }
+    .accordion_label:hover,.accordion_input:hover,.accordion_content:hover{
+        cursor: pointer;
+        text-decoration: solid;
     }
   }
 
 
 .container{
-    width: 820px;
-    height:1080px;
+    width: 51.25rem;
+    height:67.5rem;
     /*margin: 0 auto;*/
 }
 
@@ -59,14 +69,14 @@ html{
 
    float: right;
    width: 1em;
-   margin:15px;
+   margin:.9375rem;
    visibility: hidden;
 }
 .accordion_img{
 }
 .accordion_img>img{
     display: block;
-    margin: 15px auto;
+    margin: .9375rem auto;
     max-width: 50%;
     height: auto;
     width: 0px;
@@ -111,11 +121,9 @@ html{
 
 }
 
-.accordion_label:hover,.accordion_input:hover,.accordion_content:hover{
-    cursor: pointer;
-    text-decoration: solid;
-}
+
 .accordion_box:active .accordion_label{
+    cursor: grab;
     color:#e6f1f1;
     opacity: 0.8;
     transition: 0.08s;
