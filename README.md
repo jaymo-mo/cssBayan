@@ -1,2 +1,2 @@
 # cssBayan
-https://jaymo-mo.github.io/cssBayan/cssBayan/index.html
+https://jaymo-mo.github.io/cssBayan/css.Bayan/index.html
