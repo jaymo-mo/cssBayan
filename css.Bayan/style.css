@@ -1,36 +1,54 @@
-body{
+html{
     font-family:
     Arial, Helvetica, sans-serif;
-   /* font-size:16px;
-    background-color: aliceblue;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-body p{
-   /* margin: 0 0 5px;*/
-}
-
 .container{
-    max-width:1000px;
+    width: 820px;
+    height:1080px;
     /*margin: 0 auto;*/
 }
-.accordion_label:hover,.accordion_input:hover,.accordion_content:hover{
-    cursor: pointer;
-    text-decoration: solid;
+
+.accordion_icon {
+    color: #000;
+    background: url("assets/plus.png") no-repeat right;
+    background-size: 1em;
+    margin:15px;
 }
 
-.accordion_box.accordion_label:hover{
-    color:red;
-    text-decoration: underline;
+.accordion_img>img{
+    display: inline-block;
+    align-self: center;
+    max-width: 100%;
+    height: auto;
+    width: 200px;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s;
 }
+.accordion_input:checked~.accordion_label>.accordion_img>img{
+    display: block;
+    visibility: visible;
+    opacity:1;
+}
+
+
+.accordion_label:focus .accordion_img{
+
+}
+
 .accordion_box{
-    position:relative;
+    /*position:relative;*/
  /*margin-bottom:20px;*/
 }
 .accordion_label{
     display:block;
     background-color: #ff23;
-    /*padding:20 px;*/
-    /*border: 1px solid #000;*/
+    border-bottom: 1px solid #000;
+    /*font-family: FontAwesome;*/
 }
 .accordion_input{
     position:absolute;
@@ -38,18 +56,35 @@ body p{
     left:0;
     opacity:0;
 }
+
 .accordion_content{
+    overflow: hidden;
    /* padding:20 px;*/
-    /*border: 1px solid #000;*/
+    /*border: 1px solid #423f3f;*/
+    box-sizing: border-box;
     border-top:none;
     display:none;
+
 }
-.accordion_box:hover{
-    /*cursor: pointer;*/
-   /*background-color: aqua;*/
+.accordion_icon{
+    
+}
+.container:hover .accordion_label{
+
+
+}
+.accordion_label:hover,.accordion_input:hover,.accordion_content:hover{
+    cursor: pointer;
+    text-decoration: solid;
+}
+.accordion_box:active .accordion_label{
+    color:#e6f1f1;
+    opacity: 0.8;
+    transition: 0.08s;
 }
 .accordion_input:checked~.accordion_label{
     background-color: aqua;
+    transition: color 0.5s;
 }
 .accordion_input:checked ~ .accordion_content{
     display: block;
